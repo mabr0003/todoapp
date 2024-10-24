@@ -1,0 +1,131 @@
+@layer reset, global;
+
+@import url("./reset.css") layer(reset);
+
+@layer global {
+  @media (width > 600px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      align-items: start;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  body {
+    background-color: #f5f5f5;
+    display: grid;
+    align-items: center;
+  }
+
+  section {
+    > div {
+      padding: 2rem;
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    > div:first-of-type {
+      background-color: #d7f9ff;
+
+      li {
+        background-color: #8feafa;
+        padding: 1rem;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+    > div:last-of-type {
+      background-color: #afcbff;
+
+      li {
+        background-color: #7ea9fa;
+        padding: 1rem;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .donebutton {
+    background-image: url("../icon/check.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    width: 10px;
+  }
+
+  .deletebutton {
+    background-image: url("../icon/delete.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 8px;
+    width: 10px;
+  }
+
+  .movebackbutton {
+    background-image: url("../icon/redo.svg");
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    width: 10px;
+  }
+
+  #createTaskButton {
+    background-color: rgb(55, 192, 55);
+    padding: 0.5rem 1rem;
+    align-self: center;
+  }
+
+  #inputContainer {
+    display: none;
+    padding: 2rem;
+    align-self: center;
+    background-color: #ffede1;
+
+    > * {
+      grid-row: 2;
+    }
+
+    #cancel {
+      grid-row: 1;
+      grid-column: 3 / -1;
+      justify-self: end;
+      background-image: url("../icon/delete.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 8px;
+      width: 10px;
+    }
+  }
+
+  @media (width > 600px) {
+    #inputContainer {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

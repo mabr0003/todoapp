@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <button id="createTaskButton">Create a Task</button>
+        <div id="inputContainer">
+            <input type="text" id="taskInput" placeholder="Task">
+            <input type="number" id="quantityInput" placeholder="How many?" min="1">
+            <button id="submit">Submit</button>
+            <button id="cancel"></button>
+        </div>
+
+        <section>
+            <div>
+                <h1>Tasks</h1>
+                <ul id="tasklist">
+                </ul>
+            </div>
+
+            <div>
+                <h1>Done</h1>
+                <ul id="donelist"></ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
